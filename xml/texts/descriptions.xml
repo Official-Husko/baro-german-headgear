@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <!--HELMETS-->
+  <entityname.cttm_traumasoldierhelmet>Trauma Soldier Helmet</entityname.cttm_traumasoldierhelmet>
+  <entitydescription.cttm_traumasoldierhelmet>This helmet looks old, yet more futuristic than anything you've ever seen. It has a built-in aim assist system to improve the user's accuracy</entitydescription.cttm_traumasoldierhelmet>
+  <entityname.cttm_traumaofficerhelmet>Trauma Officer Helmet</entityname.cttm_traumaofficerhelmet>
+  <entitydescription.cttm_traumaofficerhelmet>This helmet looks old, yet more futuristic than anything you've ever seen. Although it lacks aim assist system, it's replaced with a thermal goggles</entitydescription.cttm_traumaofficerhelmet>
+  <entityname.cttm_traumamedichelmet>Trauma Medic Helmet</entityname.cttm_traumamedichelmet>
+  <entitydescription.cttm_traumamedichelmet>This helmet looks old, yet more futuristic than anything you've ever seen. It has a built-in health scanner to help diagnose the patient</entitydescription.cttm_traumamedichelmet>
+ </infotexts>

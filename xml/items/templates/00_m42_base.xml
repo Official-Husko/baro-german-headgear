@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!-- =========================================
+       BASE TEMPLATE: M42 Stahlhelm
+       Hidden, not spawnable directly.
+       All M42 variants inherit from this.
+       ========================================= -->
+  <Item name="Stahlhelm M42 (Base Template)"
+        identifier="ww2_stahlhelm_m42_base"
+        category="Equipment"
+        tags="smallitem,helmet"
+        HideInMenus="true"
+        cargocontaineridentifier="metalcrate"
+        description="Base template for late-war M42 helmets. Do not spawn directly."
+        impactsoundtag="impact_metal_heavy"
+        scale="0.55">
+
+    <!-- Shared campaign economy -->
+    <Price baseprice="450" sold="true">
+      <Price storeidentifier="merchantmilitary" multiplier="1.15" />
+      <Price storeidentifier="merchantresearch" multiplier="1.05" />
+      <Price storeidentifier="merchantmedical"  multiplier="1.00" />
+    </Price>
+
+    <!-- Shared crafting / salvage -->
+    <Fabricate suitablefabricators="workbench" requiredtime="10">
+      <RequiredSkill identifier="mechanical" level="15" />
+      <RequiredItem identifier="iron" amount="2" />
+      <RequiredItem identifier="organicfiber" />
+    </Fabricate>
+    <Deconstruct time="6">
+      <RequiredItem identifier="iron" amount="1" />
+    </Deconstruct>
+
+    <!-- Placeholder art (variants override) -->
+    <InventoryIcon name="M42 Base Icon"
+                   texture="%ModDir%/Images/helmets.png"
+                   sourcerect="0,0,96,64"
+                   origin="0.5,0.5" />
+    <Sprite name="M42 Base World"
+            texture="%ModDir%/Images/helmets.png"
+            sourcerect="0,0,96,64"
+            depth="0.6"
+            origin="0.5,0.5" />
+
+    <Body width="96" height="64" density="25" />
+
+    <Wearable slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="M42 Base Wearable"
+              texture="%ModDir%/Images/helmets.png"
+              limb="Head"
+              inheritlimbdepth="true"
+              inherittexturescale="true"
+              hidewearablesoftype="moustache,beard,hair"
+              sourcerect="0,0,96,64"
+              origin="0.5,0.85" />
+      <!-- Shared protection (slightly worse than M35/M40) -->
+      <damagemodifier afflictionidentifiers="lacerations,gunshotwound"
+                       armorsector="0.0,360.0"
+                       damagemultiplier="0.80"
+                       damagesound="LimbArmor"
+                       deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds,blunttrauma"
+                       armorsector="0.0,360.0"
+                       damagemultiplier="0.85"
+                       damagesound="LimbArmor"
+                       deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="bleeding"
+                       armorsector="0.0,360.0"
+                       damagemultiplier="0.90"
+                       damagesound="LimbArmor"
+                       deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="concussion"
+                       armorsector="0.0,360.0"
+                       damagemultiplier="0.85" />
+    </Wearable>
+  </Item>
+</Items>

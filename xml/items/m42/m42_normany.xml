@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!-- =========================================
+       VARIANT: M42 Normandy Camo
+       Inherits from M42 Base Template
+       ========================================= -->
+  <Item name="Stahlhelm M42 — Normandy Camo"
+        identifier="ww2_stahlhelm_m42_normandy"
+        variantof="ww2_stahlhelm_m42_base"
+        description="Late-war M42 helmet with Normandy field camouflage pattern. Raw-edge shell, cheaper and lighter than earlier models.">
+
+    <!-- Variant-specific visuals -->
+    <InventoryIcon name="M42 Normandy Icon"
+                   texture="%ModDir%/textures/test.png"
+                   sourcerect="0,0,96,64"
+                   origin="0.5,0.5" />
+    <Sprite name="M42 Normandy World"
+            texture="%ModDir%/textures/test.png"
+            sourcerect="0,0,96,64"
+            depth="0.6"
+            origin="0.5,0.5" />
+    <Wearable>
+      <sprite name="M42 Normandy Wearable"
+              texture="%ModDir%/textures/test.png"
+              limb="Head"
+              inheritlimbdepth="true"
+              inherittexturescale="true"
+              hidewearablesoftype="moustache,beard,hair"
+              sourcerect="0,0,96,64"
+              origin="0.5,0.85" />
+    </Wearable>
+  </Item>
+</Items>
