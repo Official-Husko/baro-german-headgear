@@ -2,10 +2,10 @@
 <infotexts language="English" nowhitespace="false" translatedname="English">
   <!-- Stahlhelm M42 (Heer) — “Normandy” camo — ckl64 lot 2979 -->
   <entityname.oh_42_wh_c1>Stahlhelm M42 (Heer) — “Normandy” camo — ckl64 lot 2979</entityname.oh_42_wh_c1>
-  <entitydescription.oh_42_wh_c1>
-    Issued from the ckl works in mid-1944, this size 64 shell carries the lot number 2979. 
-    Its Normandy camouflage was brushed on hastily, earthy greens and browns breaking up the outline beneath the hedgerows. 
-    Mud still clings in the rim’s recesses, as if set down in a foxhole after a summer storm. 
-    Some say it was left where its wearer fell, the liner stiffened by time, the steel carrying the silence of the bocage where battles raged and ended in whispers.
-  </entitydescription.oh_42_wh_c1>
+  <entitydescription.oh_42_wh_c1>Issued from the ckl works in mid-1944, this size 64 shell carries the lot number 2979. Its Normandy camouflage was brushed on hastily, earthy greens and browns breaking up the outline beneath the hedgerows. Mud still clings in the rim’s recesses, as if set down in a foxhole after a summer storm. Some say it was left where its wearer fell, the liner stiffened by time, the steel carrying the silence of the bocage where battles raged and ended in whispers.</entitydescription.oh_42_wh_c1>
+  <!-- Stahlhelm M42 (Heer) — single decal — ET64 lot 3119 -->
+  <entityname.oh_42_wh_sd1>Stahlhelm M42 (Heer) — single decal — ET64 lot 3119</entityname.oh_42_wh_sd1>
+  <entitydescription.oh_42_wh_sd1>Stamped ET64 with lot number 3119, this helmet followed the later-war pattern of single-decal issue. The rough-textured paint has dulled to a matte tone, broken only by the army shield applied neatly to the left side. Its chin strap and liner remain intact, the leather drawn tight, pins unmoved since the factory. A piece that speaks less of camouflage and more of regulation — carried as issued, with its insignia still proud against the steel.
+  </entitydescription.oh_42_wh_sd1>
+
 </infotexts>

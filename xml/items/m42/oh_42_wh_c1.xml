@@ -7,6 +7,12 @@
     variantof="ww2_stahlhelm_m42_base"
     scale="0.12">
 
+    <Price baseprice="720" sold="true">
+      <Price storeidentifier="merchantmilitary" multiplier="1.15" />
+      <Price storeidentifier="merchantresearch" multiplier="1.05" />
+      <Price storeidentifier="merchantmedical" multiplier="1.00" />
+    </Price>
+
     <InventoryIcon name="oh_42_wh_c1"
       texture="%ModDir%/textures/m42/oh_42_wh_c1.png"
       sourcerect="0,50,256,160" origin="0.5,0.5" />
