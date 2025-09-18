@@ -22,8 +22,8 @@
         inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true"
         hidewearablesoftype="Hair"
         sourcerect="0,50,256,160"
-        origin="0.50,0.85"
-        scale="0.45" />
+        origin="0.52,0.75"
+        scale="0.23" />
     </Wearable>
 
     <!-- Heer-leaning loot routing -->
