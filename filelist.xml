@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <contentpackage name="German Stahlhelm Collection" modversion="0.0.1" corepackage="False" gameversion="1.9.8.0">
   <Item file="%ModDir%/xml/items/m42/m42_normany.xml" />
-  <Item file="%ModDir%/xml/items/m42/test.xml" />
   <Item file="%ModDir%/xml/items/templates/00_m42_base.xml" />
   <Text file="%ModDir%/xml/texts/descriptions.xml" />
 </contentpackage>

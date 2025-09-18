@@ -13,7 +13,7 @@
         cargocontaineridentifier="metalcrate"
         description="Base template for late-war M42 helmets. Do not spawn directly."
         impactsoundtag="impact_metal_heavy"
-        scale="0.55">
+        scale="1">
 
     <!-- Shared campaign economy -->
     <Price baseprice="450" sold="true">
@@ -43,7 +43,7 @@
             depth="0.6"
             origin="0.5,0.5" />
 
-    <Body width="96" height="64" density="25" />
+    <Body width="512" height="303" density="25" />
 
     <Wearable slots="Any,Head" msg="ItemMsgPickUpSelect">
       <sprite name="M42 Base Wearable"

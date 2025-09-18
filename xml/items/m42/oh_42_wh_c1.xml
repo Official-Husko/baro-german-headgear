@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!-- M42 Normandy (Heer) ckl64 lot 2979 -->
+  <Item
+    name="Stahlhelm M42 (Heer) — 'Normandy' camo — ckl64 lot 2979"
+    identifier="oh_42_wh_c1"
+    variantof="ww2_stahlhelm_m42_base"
+    scale="0.12">
+
+    <InventoryIcon name="oh_42_wh_c1"
+      texture="%ModDir%/textures/m42/oh_42_wh_c1.png"
+      sourcerect="0,50,256,160" origin="0.5,0.5" />
+    <Sprite name="oh_42_wh_c1"
+      texture="%ModDir%/textures/m42/oh_42_wh_c1.png"
+      sourcerect="0,50,256,160" depth="0.6" origin="0.5,0.5" />
+    <Wearable>
+      <sprite name="oh_42_wh_c1"
+        texture="%ModDir%/textures/m42/oh_42_wh_c1.png"
+        limb="Head"
+        inheritlimbdepth="true"
+        inherittexturescale="true"
+        hidewearablesoftype="hair"
+        sourcerect="0,50,256,160"
+        origin="0.50,0.85"
+        scale="0.45" />
+    </Wearable>
+  </Item>
+</Items>
