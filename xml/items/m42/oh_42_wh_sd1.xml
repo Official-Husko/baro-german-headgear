@@ -1,11 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Items>
-    <!-- M42 Heer ET64 lot 3119, single decal -->
+    <!-- M42 Heer — single decal — ET64 lot 3119 -->
     <Item
         name="Stahlhelm M42 (Heer) — single decal — ET64 lot 3119"
         identifier="oh_42_wh_sd1"
         variantof="ww2_stahlhelm_m42_base"
+        tags="smallitem,helmet,m42,heer,sd"
         scale="0.12">
 
+        <!-- Variant visuals: filenames == identifier -->
         <InventoryIcon name="oh_42_wh_sd1"
             texture="%ModDir%/textures/m42/oh_42_wh_sd1.png"
             sourcerect="0,50,256,160" origin="0.5,0.5" />
@@ -16,19 +19,26 @@
             <sprite name="oh_42_wh_sd1"
                 texture="%ModDir%/textures/m42/oh_42_wh_sd1.png"
                 limb="Head"
-                inheritlimbdepth="true"
-                inherittexturescale="true"
-                hidewearablesoftype="hair"
+                inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true"
+                hidewearablesoftype="Hair"
                 sourcerect="0,50,256,160"
                 origin="0.50,0.85"
                 scale="0.45" />
         </Wearable>
 
-        <!-- Economy -->
+        <!-- Heer-leaning loot routing -->
+        <PreferredContainer primary="armcab" amount="1" />
+        <PreferredContainer secondary="wreckarmcab,abandonedarmcab,piratearmcab,outpostarmcab"
+            amount="1" spawnprobability="0.05" />
+
+        <!-- Economy: BaseWH(500) × WH(1.0) × single-decal(1.2) = 600 -->
         <Price baseprice="600" sold="true">
-            <Price storeidentifier="merchantmilitary" multiplier="1.15" />
-            <Price storeidentifier="merchantresearch" multiplier="1.05" />
-            <Price storeidentifier="merchantmedical" multiplier="1.00" />
+            <Price storeidentifier="merchantmilitary" multiplier="1.10" minavailable="2" />
+            <Price storeidentifier="merchantarmory" multiplier="1.05" minavailable="2" />
+            <Price storeidentifier="merchantcity" multiplier="1.10" />
+            <Price storeidentifier="merchantoutpost" multiplier="1.00" />
+            <Price storeidentifier="merchantresearch" sold="false" />
+            <Price storeidentifier="merchantmine" sold="false" />
         </Price>
     </Item>
 </Items>

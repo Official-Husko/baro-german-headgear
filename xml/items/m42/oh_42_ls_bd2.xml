@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+    <!-- M42 Luftschutz — beaded — hkp64 lot 1554 -->
+    <Item
+        name="M42 Luftschutz — beaded — hkp64 lot 1554"
+        identifier="oh_42_ls_bd2"
+        variantof="ww2_stahlhelm_m42_base"
+        tags="smallitem,helmet,m42,luftschutz,beaded,sd"
+        scale="0.12">
+
+        <!-- Variant visuals: filenames == identifier -->
+        <InventoryIcon name="oh_42_ls_bd2"
+            texture="%ModDir%/textures/m42/oh_42_ls_bd2.png"
+            sourcerect="0,50,256,160" origin="0.5,0.5" />
+        <Sprite name="oh_42_ls_bd2"
+            texture="%ModDir%/textures/m42/oh_42_ls_bd2.png"
+            sourcerect="0,50,256,160" depth="0.6" origin="0.5,0.5" />
+        <Wearable>
+            <sprite name="oh_42_ls_bd2"
+                texture="%ModDir%/textures/m42/oh_42_ls_bd2.png"
+                limb="Head"
+                inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true"
+                hidewearablesoftype="Hair"
+                sourcerect="0,50,256,160"
+                origin="0.50,0.85"
+                scale="0.45" />
+        </Wearable>
+
+        <!-- Branch-aware loot routing: Luftschutz shows up more in outposts/cities -->
+        <PreferredContainer primary="outpostarmcab" amount="1" />
+        <PreferredContainer secondary="merchantcity,armcab" amount="1" spawnprobability="0.03" />
+
+        <!-- Economy: BaseWH(500) × LS(0.8) × beaded(1.4) × single-decal(1.2) = 672 -->
+        <Price baseprice="672" sold="true">
+            <Price storeidentifier="merchantcity" multiplier="1.10" minavailable="1" />
+            <Price storeidentifier="merchantoutpost" multiplier="1.00" minavailable="1" />
+            <Price storeidentifier="merchantmilitary" multiplier="1.05" />
+            <Price storeidentifier="merchantarmory" multiplier="1.00" />
+            <Price storeidentifier="merchantresearch" sold="false" />
+            <Price storeidentifier="merchantmine" sold="false" />
+        </Price>
+    </Item>
+</Items>

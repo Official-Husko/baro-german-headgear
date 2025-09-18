@@ -1,78 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
-  <!-- =========================================
-       BASE TEMPLATE: M42 Stahlhelm
-       Hidden, not spawnable directly.
-       All M42 variants inherit from this.
-       ========================================= -->
-  <Item name="Stahlhelm M42 (Base Template)"
-        identifier="ww2_stahlhelm_m42_base"
-        category="Equipment"
-        tags="smallitem,helmet"
-        HideInMenus="true"
-        cargocontaineridentifier="metalcrate"
-        description="Base template for late-war M42 helmets. Do not spawn directly."
-        impactsoundtag="impact_metal_heavy"
-        scale="1">
+  <!--
+  ==========================================
+    BASE TEMPLATE: M42 Stahlhelm
+    Hidden, not spawnable directly.
+    All M42 variants inherit from this.
+  ==========================================
+  -->
+  <Item name="Stahlhelm M42 — Base"
+    identifier="ww2_stahlhelm_m42_base"
+    category="Equipment"
+    tags="smallitem,helmet,m42"
+    aliases="ballistichelmet"
+    HideInMenus="true"
+    cargocontaineridentifier="metalcrate"
+    impactsoundtag="impact_metal_heavy"
+    scale="0.12">
 
-    <!-- Shared campaign economy -->
-    <Price baseprice="450" sold="true">
-      <Price storeidentifier="merchantmilitary" multiplier="1.15" />
-      <Price storeidentifier="merchantresearch" multiplier="1.05" />
-      <Price storeidentifier="merchantmedical"  multiplier="1.00" />
+    <!-- Scale compatibility (keep visuals consistent across saves) -->
+    <Upgrade gameversion="0.9.6.0" scale="0.12" />
+
+    <!-- Natural spawn routing (variants can override/tighten) -->
+    <PreferredContainer primary="armcab" amount="1" />
+    <PreferredContainer secondary="wreckarmcab,abandonedarmcab,piratearmcab,outpostarmcab"
+      amount="1" spawnprobability="0.05" />
+
+    <!-- Economy baseline (used only if a variant doesn't override) -->
+    <Price baseprice="500" sold="true">
+      <Price storeidentifier="merchantmilitary" multiplier="1.10" minavailable="2" />
+      <Price storeidentifier="merchantarmory" multiplier="1.05" minavailable="2" />
+      <Price storeidentifier="merchantcity" multiplier="1.10" />
+      <Price storeidentifier="merchantoutpost" multiplier="1.00" />
+      <Price storeidentifier="merchantresearch" multiplier="1.10" sold="false" />
+      <Price storeidentifier="merchantmine" sold="false" />
     </Price>
 
-    <!-- Shared crafting / salvage -->
+    <!-- Craft / salvage loop -->
     <Fabricate suitablefabricators="workbench" requiredtime="10">
       <RequiredSkill identifier="mechanical" level="15" />
-      <RequiredItem identifier="iron" amount="2" />
+      <RequiredItem identifier="steel" amount="2" />
       <RequiredItem identifier="organicfiber" />
     </Fabricate>
     <Deconstruct time="6">
-      <RequiredItem identifier="iron" amount="1" />
+      <RequiredItem identifier="steel" amount="2" />
     </Deconstruct>
 
-    <!-- Placeholder art (variants override) -->
-    <InventoryIcon name="M42 Base Icon"
-                   texture="%ModDir%/textures/m42.png"
-                   sourcerect="0,0,96,64"
-                   origin="0.5,0.5" />
-    <Sprite name="M42 Base World"
-            texture="%ModDir%/textures/m42.png"
-            sourcerect="0,0,96,64"
-            depth="0.6"
-            origin="0.5,0.5" />
+    <!-- Placeholder art (variants usually override these) -->
+    <InventoryIcon name="m42_base_icon" texture="%ModDir%/textures/m42/base.png"
+      sourcerect="0,50,256,160" origin="0.5,0.5" />
+    <Sprite name="m42_base_world" texture="%ModDir%/textures/m42/base.png" sourcerect="0,50,256,160"
+      depth="0.6" origin="0.5,0.5" />
+    <Body radius="28" density="25" />
 
-    <Body width="512" height="303" density="25" />
-
+    <!-- Wearable defaults (vanilla-friendly flags); protection < vanilla ballistic -->
     <Wearable slots="Any,Head" msg="ItemMsgPickUpSelect">
-      <sprite name="M42 Base Wearable"
-              texture="%ModDir%/textures/m42.png"
-              limb="Head"
-              inheritlimbdepth="true"
-              inherittexturescale="true"
-              hidewearablesoftype="moustache,beard,hair"
-              sourcerect="0,0,96,64"
-              origin="0.5,0.85" />
-      <!-- Shared protection (slightly worse than M35/M40) -->
-      <damagemodifier afflictionidentifiers="lacerations,gunshotwound"
-                       armorsector="0.0,360.0"
-                       damagemultiplier="0.80"
-                       damagesound="LimbArmor"
-                       deflectprojectiles="true" />
-      <damagemodifier afflictionidentifiers="bitewounds,blunttrauma"
-                       armorsector="0.0,360.0"
-                       damagemultiplier="0.85"
-                       damagesound="LimbArmor"
-                       deflectprojectiles="true" />
-      <damagemodifier afflictiontypes="bleeding"
-                       armorsector="0.0,360.0"
-                       damagemultiplier="0.90"
-                       damagesound="LimbArmor"
-                       deflectprojectiles="true" />
-      <damagemodifier afflictionidentifiers="concussion"
-                       armorsector="0.0,360.0"
-                       damagemultiplier="0.85" />
+      <sprite name="m42_base_wearable"
+        texture="%ModDir%/textures/m42/base.png"
+        limb="Head"
+        inheritlimbdepth="true"
+        inheritscale="true"
+        ignorelimbscale="true"
+        hidewearablesoftype="Hair"
+        sourcerect="0,50,256,160"
+        origin="0.50,0.85"
+        scale="0.45" />
+      <damagemodifier afflictionidentifiers="lacerations,gunshotwound" armorsector="0,360"
+        damagemultiplier="0.80" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds,blunttrauma" armorsector="0,360"
+        damagemultiplier="0.85" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="bleeding" armorsector="0,360" damagemultiplier="0.90"
+        damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="concussion" armorsector="0,360" damagemultiplier="0.85" />
     </Wearable>
   </Item>
 </Items>
