@@ -34,11 +34,11 @@
 
     <!-- Placeholder art (variants override) -->
     <InventoryIcon name="M42 Base Icon"
-                   texture="%ModDir%/Images/helmets.png"
+                   texture="%ModDir%/textures/m42.png"
                    sourcerect="0,0,96,64"
                    origin="0.5,0.5" />
     <Sprite name="M42 Base World"
-            texture="%ModDir%/Images/helmets.png"
+            texture="%ModDir%/textures/m42.png"
             sourcerect="0,0,96,64"
             depth="0.6"
             origin="0.5,0.5" />
@@ -47,7 +47,7 @@
 
     <Wearable slots="Any,Head" msg="ItemMsgPickUpSelect">
       <sprite name="M42 Base Wearable"
-              texture="%ModDir%/Images/helmets.png"
+              texture="%ModDir%/textures/m42.png"
               limb="Head"
               inheritlimbdepth="true"
               inherittexturescale="true"
