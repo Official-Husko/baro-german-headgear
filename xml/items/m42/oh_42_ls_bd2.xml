@@ -4,7 +4,7 @@
     <Item
         name="M42 Luftschutz — beaded — hkp64 lot 1554"
         identifier="oh_42_ls_bd2"
-        variantof="ww2_stahlhelm_m42_base"
+        variantof="oh_42"
         tags="smallitem,helmet,m42,luftschutz,beaded,sd"
         scale="0.12">
 

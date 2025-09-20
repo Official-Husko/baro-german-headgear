@@ -13,6 +13,7 @@ fi
 MOD_NAME="${MOD_NAME:-The Great War}"
 MOD_VERSION="${MOD_VERSION:-0.4}"
 COREPACKAGE="${COREPACKAGE:-False}"
+STEAMWORKSHOP_ID="${STEAMWORKSHOP_ID:-3536468660}"
 GAME_VERSION="${GAME_VERSION:-1.9.8.0}"
 OUTPUT="${OUTPUT:-filelist.xml}"
 
@@ -88,10 +89,11 @@ sort -t'|' -k1,1 -k2,2 "$tmp" | cut -d'|' -f3- > "$tmp_sorted"
 # Write final XML
 {
   printf '<?xml version="1.0" encoding="utf-8"?>\n'
-  printf '<contentpackage name="%s" modversion="%s" corepackage="%s" gameversion="%s">\n' \
+  printf '<contentpackage name="%s" modversion="%s" corepackage="%s" steamworkshopid="%s" gameversion="%s">\n' \
     "$(xml_escape "$MOD_NAME")" \
     "$(xml_escape "$MOD_VERSION")" \
     "$(xml_escape "$COREPACKAGE")" \
+    "$(xml_escape "$STEAMWORKSHOP_ID")" \
     "$(xml_escape "$GAME_VERSION")" \
 
   cat "$tmp_sorted"

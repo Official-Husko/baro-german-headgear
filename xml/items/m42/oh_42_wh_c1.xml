@@ -4,7 +4,7 @@
   <Item
     name="Stahlhelm M42 (Heer) — 'Normandy' camo — ckl64 lot 2979"
     identifier="oh_42_wh_c1"
-    variantof="ww2_stahlhelm_m42_base"
+    variantof="oh_42"
     tags="smallitem,helmet,m42,heer,camo,normandy"
     scale="0.12">
 

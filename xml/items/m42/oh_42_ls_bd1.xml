@@ -4,7 +4,7 @@
     <Item
         name="M42 Luftschutz — beaded — EF66 lot 1047"
         identifier="oh_42_ls_bd1"
-        variantof="ww2_stahlhelm_m42_base"
+        variantof="oh_42"
         tags="smallitem,helmet,m42,luftschutz,beaded,sd"
         scale="0.12">
 

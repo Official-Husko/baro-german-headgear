@@ -12,4 +12,16 @@
   <!-- M42 Luftschutz — beaded — hkp64 lot 1554 -->
   <entityname.oh_42_ls_bd2>M42 Luftschutz — beaded — hkp64 lot 1554</entityname.oh_42_ls_bd2>
   <entitydescription.oh_42_ls_bd2>The bead rolled into the skirt marks a different duty—steel set aside for the Luftschutz. This hkp shell, size 64, lot 1554, carries a civic badge over rough wartime paint; the strap’s hard sheen and the dry creak of the liner hint at long, anxious nights. It remembers stairwells and blackout curtains, the dust under cellar steps, and the hush between siren notes when a city counted breaths in the dark.</entitydescription.oh_42_ls_bd2>
+  <!-- Stahlhelm M42 — ckl64 lot 3698 -->
+  <entityname.ww2_stahlhelm_m42_base>Stahlhelm M42 — ckl64 lot 3698</entityname.ww2_stahlhelm_m42_base>
+  <entitydescription.ww2_stahlhelm_m42_base>A late-issue M42 from the ckl works, size 64, lot 3698. The paint lies flat and unadorned, a field finish without heraldry. Its rim shows a bright line where it was gripped again and again, the inside still holding the smell of old leather. Honest steel, carried by men in the last years of the war, marked more by wear than by symbols.</entitydescription.ww2_stahlhelm_m42_base>
+  <!-- Luftschutz M38 Gladiator — 3-piece -->
+  <entityname.oh_38g3>Luftschutz M38 Gladiator — 3-piece</entityname.oh_38g3>
+  <entitydescription.oh_38g3>Pressed for the Luftschutz, the Gladiator style favored comfort and coverage in streets gone dark.Three joined sections shape the crown and skirt, paint laid matte so light would not catch on it.It remembers stairwells, torchlight, and the hush after sirens when neighbors counted the seconds together.</entitydescription.oh_38g3>
+  <!-- Luftschutz M38 Gladiator — 2-piece -->
+  <entityname.oh_38g2>Luftschutz M38 Gladiator — 2-piece</entityname.oh_38g2>
+  <entitydescription.oh_38g2>A rarer two-piece shell, the crown and skirt joined cleanly with the Luftschutz badge sharp over the brow.A rear size mark sits neat above smooth paint.It carries the quiet work of its branch—doorways, stairwells, and the dust that settles after the all-clear.</entitydescription.oh_38g2>
+  <!-- Luftschutz M38 Gladiator — 1-piece -->
+  <entityname.oh_38g1>Luftschutz M38 Gladiator — 1-piece</entityname.oh_38g1>
+  <entitydescription.oh_38g1>The scarce one-piece Gladiator shell, pressed in a single form and marked with the Luftschutz eagle at the brow.Light and rigid, it sits close to the head; the rear size stencil is crisp, the paint smooth to the touch.It recalls wardens moving through stairwells and courtyards, guiding voices in the dark.</entitydescription.oh_38g1>
 </infotexts>

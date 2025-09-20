@@ -3,26 +3,26 @@
   <!--
   ==========================================
     BASE TEMPLATE: M42 Stahlhelm
-    Hidden, not spawnable directly.
-    All M42 variants inherit from this.
+    Usable as a plain late-war M42 (ckl64 lot 3698)
+    and serves as the inheritance base.
   ==========================================
   -->
-  <Item name="Stahlhelm M42 — Base"
-    identifier="ww2_stahlhelm_m42_base"
+  <Item name="Stahlhelm M42 — ckl64 lot 3698"
+    identifier="oh_42"
     category="Equipment"
-    tags="smallitem,helmet,m42"
+    tags="smallitem,helmet,m42,heer,ss"
     aliases="ballistichelmet"
     HideInMenus="true"
     cargocontaineridentifier="metalcrate"
     impactsoundtag="impact_metal_heavy"
     scale="0.12">
 
-    <!-- Natural spawn routing (variants can override/tighten) -->
+    <!-- Natural spawn routing -->
     <PreferredContainer primary="armcab" amount="1" />
     <PreferredContainer secondary="wreckarmcab,abandonedarmcab,piratearmcab,outpostarmcab"
       amount="1" spawnprobability="0.05" />
 
-    <!-- Economy baseline (used only if a variant doesn't override) -->
+    <!-- Economy baseline -->
     <Price baseprice="500" sold="true">
       <Price storeidentifier="merchantmilitary" multiplier="1.10" minavailable="2" />
       <Price storeidentifier="merchantarmory" multiplier="1.05" minavailable="2" />
@@ -42,25 +42,28 @@
       <RequiredItem identifier="steel" amount="2" />
     </Deconstruct>
 
-    <!-- Placeholder art (variants usually override these) -->
-    <InventoryIcon name="m42_base_icon" texture="%ModDir%/textures/m42/base.png"
+    <!-- Placeholder art -->
+    <InventoryIcon name="m42_base_icon"
+      texture="%ModDir%/textures/m42/oh_42.png"
       sourcerect="0,50,256,160" origin="0.5,0.5" />
-    <Sprite name="m42_base_world" texture="%ModDir%/textures/m42/base.png" sourcerect="0,50,256,160"
-      depth="0.6" origin="0.5,0.5" />
-    <Body width="108" height="69" density="25" />
+    <Sprite name="m42_base_world"
+      texture="%ModDir%/textures/m42/oh_42.png"
+      sourcerect="0,50,256,160" depth="0.6" origin="0.5,0.5" />
 
-    <!-- Wearable defaults (vanilla-friendly flags); protection < vanilla ballistic -->
+    <Body width="168" height="124" density="25" />
+
+    <!-- Wearable defaults -->
     <Wearable slots="Any,Head" msg="ItemMsgPickUpSelect">
       <sprite name="m42_base_wearable"
-        texture="%ModDir%/textures/m42/base.png"
+        texture="%ModDir%/textures/m42/oh_42.png"
         limb="Head"
         inheritlimbdepth="true"
         inheritscale="true"
         ignorelimbscale="true"
         hidewearablesoftype="Hair"
         sourcerect="0,50,256,160"
-        origin="0.50,0.85"
-        scale="0.45" />
+        origin="0.52,0.85"
+        scale="0.23" />
       <damagemodifier afflictionidentifiers="lacerations,gunshotwound" armorsector="0,360"
         damagemultiplier="0.80" damagesound="LimbArmor" deflectprojectiles="true" />
       <damagemodifier afflictionidentifiers="bitewounds,blunttrauma" armorsector="0,360"

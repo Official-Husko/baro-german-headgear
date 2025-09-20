@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+    <!-- Luftschutz M38 Gladiator — 2-piece -->
+    <Item
+        name="Luftschutz M38 Gladiator — 2-piece"
+        identifier="oh_38g2"
+        variantof="oh_38g3"
+        tags="smallitem,helmet,m38,luftschutz,gladiator,2piece,sd"
+        scale="0.12">
+
+        <InventoryIcon name="oh_38g2"
+            texture="%ModDir%/textures/m38/gladiators/oh_38g2.png"
+            sourcerect="0,50,256,160" origin="0.5,0.5" />
+        <Sprite name="oh_38g2"
+            texture="%ModDir%/textures/m38/gladiators/oh_38g2.png"
+            sourcerect="0,50,256,160" depth="0.6" origin="0.5,0.5" />
+        <Wearable>
+            <sprite name="oh_38g2"
+                texture="%ModDir%/textures/m38/gladiators/oh_38g2.png"
+                limb="Head"
+                inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true"
+                hidewearablesoftype="Hair"
+                sourcerect="0,50,256,160"
+                origin="0.52,0.90"
+                scale="0.24" />
+        </Wearable>
+
+        <!-- Civilian/outpost skew -->
+        <PreferredContainer primary="outpostarmcab" amount="1" />
+        <PreferredContainer secondary="merchantcity,armcab" amount="1" spawnprobability="0.04" />
+
+        <!-- Economy -->
+        <Price baseprice="470" sold="true">
+            <Price storeidentifier="merchantcity" multiplier="1.10" minavailable="2" />
+            <Price storeidentifier="merchantoutpost" multiplier="1.00" minavailable="2" />
+            <Price storeidentifier="merchantarmory" multiplier="0.95" />
+            <Price storeidentifier="merchantmilitary" multiplier="0.95" />
+            <Price storeidentifier="merchantresearch" sold="false" />
+            <Price storeidentifier="merchantmine" sold="false" />
+        </Price>
+    </Item>
+</Items>

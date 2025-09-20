@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+    <!--
+    ==========================================
+    M38 Gladiator — Base/Parent (3-piece)
+    ID: oh_38g3
+    - Usable Luftschutz Gladiator (3-piece)
+    - Parent for all M38 Gladiator variants
+    ==========================================
+    -->
+    <Item name="Luftschutz M38 Gladiator — 3-piece"
+        identifier="oh_38g3"
+        category="Equipment"
+        tags="smallitem,helmet,m38,luftschutz,gladiator,3piece"
+        HideInMenus="true"
+        cargocontaineridentifier="metalcrate"
+        impactsoundtag="impact_metal_heavy"
+        scale="0.12">
+
+        <!-- Civilian-skewed routing -->
+        <PreferredContainer primary="outpostarmcab" amount="1" />
+        <PreferredContainer secondary="merchantcity,armcab,wreckarmcab,abandonedarmcab" amount="1"
+            spawnprobability="0.04" />
+
+        <!-- Economy baseline for Gladiator 3-piece -->
+        <!-- Base38LS = 300 -->
+        <Price baseprice="300" sold="true">
+            <Price storeidentifier="merchantcity" multiplier="1.05" minavailable="2" />
+            <Price storeidentifier="merchantoutpost" multiplier="1.00" minavailable="2" />
+            <Price storeidentifier="merchantarmory" multiplier="0.95" />
+            <Price storeidentifier="merchantmilitary" multiplier="0.95" />
+            <Price storeidentifier="merchantresearch" sold="false" />
+            <Price storeidentifier="merchantmine" sold="false" />
+        </Price>
+
+        <!-- Lighter craft/deconstruct -->
+        <Fabricate suitablefabricators="workbench" requiredtime="8">
+            <RequiredSkill identifier="mechanical" level="10" />
+            <RequiredItem identifier="steel" amount="1" />
+            <RequiredItem identifier="organicfiber" />
+        </Fabricate>
+        <Deconstruct time="5">
+            <RequiredItem identifier="steel" amount="1" />
+        </Deconstruct>
+
+        <!-- Default art (variants usually override these) -->
+        <InventoryIcon name="oh_38g3_icon"
+            texture="%ModDir%/textures/m38/gladiators/oh_38g3.png"
+            sourcerect="0,50,256,160" origin="0.5,0.5" />
+        <Sprite name="oh_38g3_world"
+            texture="%ModDir%/textures/m38/gladiators/oh_38g3.png"
+            sourcerect="0,50,256,160" depth="0.6" origin="0.5,0.5" />
+        <Body width="168" height="124" density="22" />
+
+        <!-- Softer protection than combat helmets -->
+        <Wearable slots="Any,Head" msg="ItemMsgPickUpSelect">
+            <sprite name="oh_38g3_wearable"
+                texture="%ModDir%/textures/m38/gladiators/oh_38g3.png"
+                limb="Head"
+                inheritlimbdepth="true"
+                inheritscale="true"
+                ignorelimbscale="true"
+                hidewearablesoftype="Hair"
+                sourcerect="0,50,256,160"
+                origin="0.52,0.90"
+                scale="0.24" />
+            <damagemodifier afflictionidentifiers="lacerations,gunshotwound" armorsector="0,360"
+                damagemultiplier="0.90" damagesound="LimbArmor" deflectprojectiles="true" />
+            <damagemodifier afflictionidentifiers="bitewounds,blunttrauma" armorsector="0,360"
+                damagemultiplier="0.95" damagesound="LimbArmor" deflectprojectiles="true" />
+            <damagemodifier afflictiontypes="bleeding" armorsector="0,360" damagemultiplier="0.95"
+                damagesound="LimbArmor" deflectprojectiles="true" />
+            <damagemodifier afflictionidentifiers="concussion" armorsector="0,360"
+                damagemultiplier="0.95" />
+        </Wearable>
+    </Item>
+</Items>
