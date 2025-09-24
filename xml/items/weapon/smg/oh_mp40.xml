@@ -65,6 +65,14 @@
             <Item identifier="steel" amount="3" />
             <Item identifier="aluminium" amount="1" />
         </Deconstruct>
-        <Upgrade gameversion="0.10.0.0" scale="1.0" />
+        
+        <Price baseprice="520" sold="true">
+            <Price storeidentifier="merchantcity" sold="false" />
+            <Price storeidentifier="merchantoutpost" sold="false" />
+            <Price storeidentifier="merchantmilitary" multiplier="1.05" />
+            <Price storeidentifier="merchantarmory" multiplier="1.00" />
+            <Price storeidentifier="merchantresearch" sold="false" />
+            <Price storeidentifier="merchantmine" sold="false" />
+        </Price>
     </Item>
 </Items>

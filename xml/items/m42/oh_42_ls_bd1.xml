@@ -32,8 +32,8 @@
 
         <!-- Economy: BaseWH(500) × LS(0.8) × beaded(1.4) × SD(1.2) = 672 -->
         <Price baseprice="672" sold="true">
-            <Price storeidentifier="merchantcity" multiplier="1.10" minavailable="1" />
-            <Price storeidentifier="merchantoutpost" multiplier="1.00" minavailable="1" />
+            <Price storeidentifier="merchantcity" multiplier="1.10" />
+            <Price storeidentifier="merchantoutpost" multiplier="1.00" />
             <Price storeidentifier="merchantmilitary" multiplier="1.05" />
             <Price storeidentifier="merchantarmory" multiplier="1.00" />
             <Price storeidentifier="merchantresearch" sold="false" />

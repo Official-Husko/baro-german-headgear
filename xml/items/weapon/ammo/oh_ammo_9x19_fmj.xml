@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-    <Item identifier="oh_ammo_9x19_fmj" name="9×19mm FMJ Round" category="Weapon" maxstacksize="64"
-        maxstacksizecharacterinventory="64" interactthroughwalls="true"
+    <Item identifier="oh_ammo_9x19_fmj" name="9×19mm FMJ Round" category="Weapon" maxstacksize="32"
+        maxstacksizecharacterinventory="32" interactthroughwalls="true"
         cargocontaineridentifier="metalcrate" tags="smallitem,9mm,handheldammo,ammoround,oh_9mm"
         scale="0.05" impactsoundtag="impact_metal_light">
         <!-- spawn preferences (optional) -->
@@ -46,6 +46,14 @@
             <RequiredSkill identifier="weapons" level="15" />
             <RequiredItem identifier="steel" amount="1" />
         </Fabricate>
-        <Upgrade gameversion="0.10.0.0" scale="0.5" />
+
+        <Price baseprice="8" sold="true">
+            <Price storeidentifier="merchantcity" sold="false" />
+            <Price storeidentifier="merchantoutpost" multiplier="1.0" />
+            <Price storeidentifier="merchantmilitary" multiplier="1.5" />
+            <Price storeidentifier="merchantarmory" multiplier="1.5" />
+            <Price storeidentifier="merchantresearch" sold="false" />
+            <Price storeidentifier="merchantmine" sold="false" />
+        </Price>
     </Item>
 </Items>

@@ -11,10 +11,6 @@
         <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="2"
             spawnprobability="0.5" />
         <PreferredContainer secondary="secarmcab" />
-        <!-- price / craft -->
-        <Price baseprice="120" minleveldifficulty="25">
-            <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="3" />
-        </Price>
         <Fabricate suitablefabricators="fabricator" requiredtime="30" requiresrecipe="true"
             amount="1">
             <RequiredSkill identifier="weapons" level="30" />
@@ -39,6 +35,14 @@
             <Item identifier="steel" amount="2" />
             <Item identifier="springs" amount="1" />
         </Deconstruct>
-        <Upgrade gameversion="0.10.0.0" scale="0.9" />
+
+        <Price baseprice="120" sold="true">
+            <Price storeidentifier="merchantcity" sold="false" />
+            <Price storeidentifier="merchantoutpost" multiplier="1.0" />
+            <Price storeidentifier="merchantmilitary" multiplier="1.5" />
+            <Price storeidentifier="merchantarmory" multiplier="1.5" />
+            <Price storeidentifier="merchantresearch" sold="false" />
+            <Price storeidentifier="merchantmine" sold="false" />
+        </Price>
     </Item>
 </Items>

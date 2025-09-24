@@ -33,8 +33,8 @@
 
     <!-- Economy: BaseWH(500) × WH(1.0) × camo(1.6) = 800 -->
     <Price baseprice="800" sold="true">
-      <Price storeidentifier="merchantmilitary" multiplier="1.10" minavailable="2" />
-      <Price storeidentifier="merchantarmory" multiplier="1.05" minavailable="2" />
+      <Price storeidentifier="merchantmilitary" multiplier="1.10" />
+      <Price storeidentifier="merchantarmory" multiplier="1.05" />
       <Price storeidentifier="merchantcity" multiplier="1.10" />
       <Price storeidentifier="merchantoutpost" multiplier="1.00" />
       <Price storeidentifier="merchantresearch" sold="false" />

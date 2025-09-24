@@ -24,4 +24,13 @@
   <!-- Luftschutz M38 Gladiator — 1-piece -->
   <entityname.oh_38g1>Luftschutz M38 Gladiator — 1-piece</entityname.oh_38g1>
   <entitydescription.oh_38g1>The scarce one-piece Gladiator shell, pressed in a single form and marked with the Luftschutz eagle at the brow.Light and rigid, it sits close to the head; the rear size stencil is crisp, the paint smooth to the touch.It recalls wardens moving through stairwells and courtyards, guiding voices in the dark.</entitydescription.oh_38g1>
+  <!-- MP40 -->
+  <entityname.oh_mp40>Maschinenpistole 40 (MP40)</entityname.oh_mp40>
+  <entitydescription.oh_mp40>The MP40 was Germany’s standard submachine gun of the Second World War, chambered in 9×19mm Parabellum and fed from a 32-round magazine. Stamped steel parts and a folding stock made it practical for mass production and compact for paratroops, vehicle crews, and squad leaders. It fired at around 500 rounds per minute, controllable in bursts but intended for close combat rather than long-range precision. Allied troops often called it the “Schmeisser,” and later soldier slang gave it nicknames such as the “Ghetto Blaster.”</entitydescription.oh_mp40>
+  <!-- 9×19mm Parabellum FMJ -->
+  <entityname.oh_ammo_9x19_fmj>9×19mm Parabellum (FMJ)</entityname.oh_ammo_9x19_fmj>
+  <entitydescription.oh_ammo_9x19_fmj>Known also as 9mm Luger, this cartridge was the standard pistol and submachine gun round of the German armed forces. The FMJ load, with its copper-jacketed lead core, fed reliably in automatic weapons from the Luger P08 and Walther P38 pistols to the MP38 and MP40 submachine guns. Its manageable recoil and high magazine capacity made it ideal for short- to medium-range engagements, though less powerful than rifle ammunition.</entitydescription.oh_ammo_9x19_fmj>
+  <!-- MP40 Magazine -->
+  <entityname.oh_mag_mp40_9x19mm>MP40 Magazine — 32-round</entityname.oh_mag_mp40_9x19mm>
+  <entitydescription.oh_mag_mp40_9x19mm>Detachable steel box magazine holding 32 rounds of 9×19mm Parabellum for the MP40. Compact and robust, it allowed German infantry to sustain bursts of automatic fire before reloading. Soldiers carried multiple loaded magazines in pouches; dents or fouling could cause stoppages, so keeping them clean was as important as having them full.</entitydescription.oh_mag_mp40_9x19mm>
 </infotexts>
