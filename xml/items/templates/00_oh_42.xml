@@ -62,7 +62,7 @@
         ignorelimbscale="true"
         hidewearablesoftype="Hair"
         sourcerect="0,50,256,160"
-        origin="0.52,0.85"
+        origin="0.56,0.88"
         scale="0.23" />
       <damagemodifier afflictionidentifiers="lacerations,gunshotwound" armorsector="0,360"
         damagemultiplier="0.80" damagesound="LimbArmor" deflectprojectiles="true" />
