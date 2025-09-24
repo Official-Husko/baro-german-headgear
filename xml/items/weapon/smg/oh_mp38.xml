@@ -1,51 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-    <Item name="MP40" identifier="oh_mp40" category="Weapon" maxstacksize="1"
+    <Item name="MP38" identifier="oh_mp38" category="Weapon" maxstacksize="1"
         maxstacksizecharacterinventory="1" interactthroughwalls="true"
-        tags="weapon,gun,smg,oh_mp40,handheld" Scale="0.38" impactsoundtag="impact_metal_heavy">
+        tags="weapon,gun,smg,oh_mp38,handheld" Scale="0.38" impactsoundtag="impact_metal_heavy">
         <!-- visuals -->
-        <InventoryIcon texture="%ModDir%/textures/weapons/smg_atlas.png" sourcerect="14,31,260,66"
+        <InventoryIcon texture="%ModDir%/textures/weapons/smg_atlas.png" sourcerect="6,97,193,63"
             origin="0.5,0.5" />
-        <Sprite texture="%ModDir%/textures/weapons/smg_atlas.png" sourcerect="14,31,260,66"
-            depth="0.55" origin="0.5,0.5" />
+        <Sprite texture="%ModDir%/textures/weapons/smg_atlas.png" sourcerect="6,97,193,63"
+            depth="0.55" origin="0.3,0.6" />
         <Body width="96" height="24" density="18" />
-        <!-- holdable: two-handed -->
+        <!-- holdable: two-handed (same positioning as MP40 for consistency) -->
         <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="40,-10" aimpos="38,-10"
-            handle1="-45,-7" handle2="50,15" holdangle="-35" msg="ItemMsgPickUpSelect" />
-        <!-- the gun holds exactly 1 magazine item in its internal slot -->
+            handle1="-45,-7" handle2="55,15" holdangle="-35" msg="ItemMsgPickUpSelect" />
+        <!-- single magazine slot (accepts the same MP40 mag) -->
         <ItemContainer capacity="1" maxstacksize="1" hideitems="false"
             containedstateindicatorslot="0" containedstateindicatorstyle="bullet"
             containedspritedepth="0.56" allowstoring="true" allowtaking="true" drawinventory="true"
             canbeselected="true">
-            <Containable items="oh_mag_mp40_9x19mm,oh_mag_mp38_9x19mm" hide="false"
-                itempos="16.8,-6" rotation="0" />
+            <Containable items="oh_mag_mp38_9x19mm,oh_mag_mp40_9x19mm" hide="false"
+                itempos="19.5,-8.5" rotation="0" />
             <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png"
                 sourcerect="256,448,64,64" origin="0.5,0.5" />
             <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png"
                 sourcerect="320,448,64,64" origin="0.5,0.5" />
         </ItemContainer>
-        <RangedWeapon barrelpos="130,35" cursorpos="100,-18" reload="0.12" firerate="8.0"
-            holdtrigger="true" spread="6.0" unskilledspread="14.0" recoil="1.8"
-            projectilevelocity="700" suitableammocontainertags="magazine,9mm"
-            ammoidentifier="oh_ammo_9x19_fmj">
+        <!-- Ranged weapon: slightly different tuning from MP40 -->
+        <!-- reload = delay between shots; firerate included for clarity -->
+        <RangedWeapon barrelpos="130,35" cursorpos="100,-18" reload="0.125" firerate="7.5"
+            holdtrigger="true" spread="6.0" unskilledspread="14.0" recoil="1.6"
+            projectilevelocity="700">
+            <!-- muzzle flash & casings only play when a shot actually occurs -->
             <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0"
                 velocitymax="0" type="OnUse" />
             <StatusEffect type="OnUse" target="This">
                 <ParticleEmitter particle="casingfirearm" particleamount="1" anglemin="90"
                     anglemax="150" velocitymin="50" velocitymax="250" CopyEntityAngle="true" />
-                <Explosion range="150.0" force="1" shockwave="false" smoke="false" flames="false"
-                    sparks="false" underwaterbubble="false" camerashake="3.0" />
+                <Explosion range="135.0" force="0.9" shockwave="false" smoke="false" flames="false"
+                    sparks="false" underwaterbubble="false" camerashake="2.5" />
             </StatusEffect>
+            <!-- forward Use to the inserted magazine; magazine forwards to a contained round -->
             <StatusEffect type="OnUse" target="Contained">
                 <Use />
             </StatusEffect>
+            <!-- require at least one 9x19 FMJ round among contained items (inside inserted mag) -->
             <RequiredItems identifier="oh_ammo_9x19_fmj" type="Contained" msg="ItemMsgAmmoRequired" />
-            <RequiredSkill identifier="weapons" level="50" />
-            <!-- UI crosshair (optional, tweak textures) -->
+            <!-- slightly lower weapons skill than the MP40 variant -->
+            <RequiredSkill identifier="weapons" level="45" />
+            <!-- crosshair -->
             <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
             <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png"
                 sourcerect="256,256,256,256" />
-            <!-- sounds -->
+            <!-- sounds (replace with real MP38 sounds or reuse MP40 ones) -->
             <Sound file="%ModDir%/sounds/weapons/mp40/oh_mp40_s1.ogg" type="OnUse" range="3000"
                 selectionmode="Random" />
             <Sound file="%ModDir%/sounds/weapons/mp40/oh_mp40_s2.ogg" type="OnUse" range="3000" />
@@ -55,24 +60,20 @@
             <Sound file="%ModDir%/sounds/weapons/mp40/oh_mp40_s6.ogg" type="OnUse" range="3000" />
             <Sound file="%ModDir%/sounds/weapons/mp40/oh_mp40_s7.ogg" type="OnUse" range="3000" />
         </RangedWeapon>
-        <!-- crafting / deconstruct -->
-        <Fabricate suitablefabricators="fabricator" requiredtime="60" requiresrecipe="true"
+        <!-- craft / deconstruct -->
+        <Fabricate suitablefabricators="fabricator" requiredtime="55" requiresrecipe="true"
             amount="1">
-            <RequiredSkill identifier="weapons" level="45" />
+            <RequiredSkill identifier="weapons" level="40" />
             <RequiredItem identifier="steel" amount="4" />
             <RequiredItem identifier="aluminium" amount="1" />
         </Fabricate>
-        <Deconstruct time="20">
+        <Deconstruct time="18">
             <Item identifier="steel" amount="3" />
             <Item identifier="aluminium" amount="1" />
         </Deconstruct>
-        <Price baseprice="520" sold="true">
-            <Price storeidentifier="merchantcity" sold="false" />
-            <Price storeidentifier="merchantoutpost" sold="false" />
-            <Price storeidentifier="merchantmilitary" multiplier="1.05" />
+        <Price baseprice="480" sold="true">
+            <Price storeidentifier="merchantmilitary" multiplier="1.02" />
             <Price storeidentifier="merchantarmory" multiplier="1.00" />
-            <Price storeidentifier="merchantresearch" sold="false" />
-            <Price storeidentifier="merchantmine" sold="false" />
         </Price>
     </Item>
 </Items>

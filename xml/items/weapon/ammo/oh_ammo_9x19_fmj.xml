@@ -13,8 +13,8 @@
         <PreferredContainer secondary="secarmcab" />
         <!-- visuals (replace textures with your assets) -->
         <InventoryIcon texture="%ModDir%/textures/weapons/ammo_atlas1.png"
-            sourcerect="1783,39,225,222" origin="0.5,0.5" />
-        <Sprite texture="%ModDir%/textures/weapons/ammo_atlas1.png" sourcerect="1783,39,225,222"
+            sourcerect="7,7,58,57" origin="0.5,0.5" />
+        <Sprite texture="%ModDir%/textures/weapons/ammo_atlas1.png" sourcerect="7,7,58,57"
             depth="0.55" origin="0.5,0.5" />
         <Body width="12" height="6" density="15" />
         <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
@@ -46,7 +46,6 @@
             <RequiredSkill identifier="weapons" level="15" />
             <RequiredItem identifier="steel" amount="1" />
         </Fabricate>
-
         <Price baseprice="8" sold="true">
             <Price storeidentifier="merchantcity" sold="false" />
             <Price storeidentifier="merchantoutpost" multiplier="1.0" />

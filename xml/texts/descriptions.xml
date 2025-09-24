@@ -33,4 +33,10 @@
   <!-- MP40 Magazine -->
   <entityname.oh_mag_mp40_9x19mm>MP40 Magazine — 32-round</entityname.oh_mag_mp40_9x19mm>
   <entitydescription.oh_mag_mp40_9x19mm>Detachable steel box magazine holding 32 rounds of 9×19mm Parabellum for the MP40. Compact and robust, it allowed German infantry to sustain bursts of automatic fire before reloading. Soldiers carried multiple loaded magazines in pouches; dents or fouling could cause stoppages, so keeping them clean was as important as having them full.</entitydescription.oh_mag_mp40_9x19mm>
+  <!-- MP38 -->
+  <entityname.oh_mp38>Maschinenpistole 38 (MP38)</entityname.oh_mp38>
+  <entitydescription.oh_mp38>The MP38 is an early German 9×19mm submachine gun that directly preceded the MP40. Featuring milled and pressed components with a folding stock, it provided controllable automatic fire from a 32-round box magazine. Slightly lighter on recoil than later variants, the MP38 was favored for close-quarters use, vehicle crews, and airborne troops.</entitydescription.oh_mp38>
+  <!-- MP38 Magazine -->
+  <entityname.oh_mag_mp38_9x19mm>MP38 Magazine — 32-round (9×19mm)</entityname.oh_mag_mp38_9x19mm>
+  <entitydescription.oh_mag_mp38_9x19mm>Detachable steel box magazine for the MP38, holding 32 rounds of 9×19mm Parabellum. Interchangeable with the later MP40, it uses a double-column, single-feed design: reliable when clean, but sensitive to dents and fouling. Issued in pairs in belt pouches and commonly filled with a clip-on loading tool, it enabled fast magazine swaps for sustained close-quarters fire.</entitydescription.oh_mag_mp38_9x19mm>
 </infotexts>
