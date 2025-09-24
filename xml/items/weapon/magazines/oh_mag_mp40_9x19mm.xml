@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+    <Item name="MP40 Magazine (9×19mm)" identifier="oh_mag_mp40_9x19mm" category="Weapon"
+        maxstacksize="1" maxstacksizecharacterinventory="1" interactthroughwalls="true"
+        cargocontaineridentifier="metalcrate"
+        tags="magazine,mp40,9mm,handheldammo,smallitem,oh_mp40mag" Scale="0.38"
+        impactsoundtag="impact_metal_heavy">
+        <!-- spawn rules -->
+        <PreferredContainer primary="armcab" amount="1" spawnprobability="1" notcampaign="true"
+            notpvp="true" />
+        <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="2"
+            spawnprobability="0.5" />
+        <PreferredContainer secondary="secarmcab" />
+        <!-- price / craft -->
+        <Price baseprice="120" minleveldifficulty="25">
+            <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="3" />
+        </Price>
+        <Fabricate suitablefabricators="fabricator" requiredtime="30" requiresrecipe="true"
+            amount="1">
+            <RequiredSkill identifier="weapons" level="30" />
+            <RequiredItem identifier="steel" amount="3" />
+        </Fabricate>
+        <!-- visuals -->
+        <InventoryIcon texture="%ModDir%/textures/weapons/smg_atlas.png" sourcerect="278,14,16,60"
+            origin="0.5,0.5" />
+        <Sprite texture="%ModDir%/textures/weapons/smg_atlas.png" depth="0.54"
+            sourcerect="278,14,16,60" origin="0.5,0.5" />
+        <Body width="36" height="12" density="15" />
+        <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+        <Holdable canBeCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0"
+            msg="ItemMsgPickUpSelect" />
+        <ItemContainer capacity="1" hidecontents="true" allowstoring="true" allowtaking="true"
+            drawinventory="true" canbeselected="true" removecontaineditemsondeconstruct="true">
+            <Containable items="oh_ammo_9x19_fmj" />
+            <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="256,448,64,64" origin="0.5,0.5" />
+            <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="320,448,64,64" origin="0.5,0.5" />
+        </ItemContainer>
+        <Deconstruct time="10">
+            <Item identifier="steel" amount="2" />
+            <Item identifier="springs" amount="1" />
+        </Deconstruct>
+        <Upgrade gameversion="0.10.0.0" scale="0.9" />
+    </Item>
+</Items>

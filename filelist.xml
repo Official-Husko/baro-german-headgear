@@ -8,5 +8,8 @@
   <Item file="%ModDir%/xml/items/m42/oh_42_wh_c1.xml" />
   <Item file="%ModDir%/xml/items/m42/oh_42_wh_sd1.xml" />
   <Item file="%ModDir%/xml/items/templates/00_oh_42.xml" />
+  <Item file="%ModDir%/xml/items/weapon/ammo/oh_ammo_9x19_fmj.xml" />
+  <Item file="%ModDir%/xml/items/weapon/magazines/oh_mag_mp40_9x19mm.xml" />
+  <Item file="%ModDir%/xml/items/weapon/smg/oh_mp40.xml" />
   <Text file="%ModDir%/xml/texts/descriptions.xml" />
 </contentpackage>
